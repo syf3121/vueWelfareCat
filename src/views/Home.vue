@@ -2,7 +2,7 @@
   <div class="home">
     <img src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <button @click="getUserInfo">click me!</button>
+    <el-button @click="getUserInfo">click me!</el-button>
   </div>
 </template>
 
@@ -10,11 +10,13 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
 import { mapActions } from 'vuex';
+import { Button } from 'element-ui';
 
 export default {
   name: 'home',
   components: {
     HelloWorld,
+    'el-button': Button,
   },
   methods: {
     ...mapActions('user', [
