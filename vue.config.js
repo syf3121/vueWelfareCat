@@ -9,4 +9,7 @@ module.exports = {
     config.resolve.alias
       .set('@', resolve('src'));
   },
+  devServer: {
+    port: 9527
+  }
 };
